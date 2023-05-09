@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- -----FB------->
+    <script src="FB/jquery-3.2.1.min.js"></script>
+    <script src="FB/raphael.2.1.0.min.js"></script>
+    <script src="FB/justgage.1.0.1.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <!-- <span class="material-icons-outlined">search</span> -->
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">shopping_cart</span> STORE
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">inventory_2</span> Products
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">category</span> Categories
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">groups</span> Customers
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">fact_check</span> Inventory
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">poll</span> Reports
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span> Settings
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>Thông số môi trường</h2>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Nhiệt độ (℃)</h3>
+              <span class="material-icons-outlined">thermostat</span>
+            </div>
+            <input id="tbx_nhietdo" disabled="disabled" type="text" />
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Độ ẩm (%)</h3>
+              <span class="material-icons-outlined">water</span>
+            </div>
+            <input id="tbx_doam" disabled="disabled" type="text" />
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Tốc độ gió (m/s)</h3>
+              <span class="material-icons-outlined">wind_power</span>
+            </div>
+            <input id="tbx_tocgio" disabled="disabled" type="text" />
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>CO2 (PPM)</h3>
+              <span class="material-icons-outlined">ac_unit</span>
+            </div>
+            <input id="tbx_co2" disabled="disabled" type="text" />
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>NH3 (PPM)</h3>
+              <span class="material-icons-outlined">masks</span>
+            </div>
+            <input id="tbx_nh3" disabled="disabled" type="text" />
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Quạt</h3>
+              <span class="material-icons-outlined">autorenew</span>
+
+            </div>
+            <input id="tt_quat" disabled="disabled" type="text" />
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">Top 5 Products</h2>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">Purchase and Sales Orders</h2>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
